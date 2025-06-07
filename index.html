@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GitHub Profile Reviewer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>GitHub Profile Reviewer</h1>
+    <form class="input-group" onsubmit="event.preventDefault(); getProfile();">
+      <input 
+        type="text" 
+        id="usernameInput" 
+        name="username" 
+        placeholder="Enter GitHub username" 
+        required 
+        autocomplete="off"
+        aria-label="GitHub username"
+      />
+      <button type="submit">Search Profile</button>
+    </form>
+    <div id="profile" aria-live="polite" ></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  padding: 20px;
+}
+
+/* Main container */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Input section */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  margin-top:23px;
+}
+
+.input-group input {
+  padding: 10px;
+  width: 80%;
+  max-width: 350px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.input-group button {
+  padding: 10px 20px;
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.input-group button:hover {
+  background-color: #005bb5;
+}
+
+/* Profile section */
+.profile-card {
+  margin-bottom: 40px;
+}
+
+/* Centered header (avatar + name) */
+.profile-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-header img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.profile-header h2 {
+  margin-top: 10px;
+}
+
+/* Profile info grid */
+.profile-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  text-align: left;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+
+.profile-info-grid p,
+.profile-info-grid a {
+  background-color: #f9f9f9;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  font-size: 15px;
+}
+
+.view-profile-link {
+  grid-column: span 2;
+  text-align: center;
+}
+
+.view-profile-link a {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #0073e6;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.view-profile-link a:hover {
+  background-color: #005bb5;
+}
+
+/* Repositories section */
+.repo-section {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.repo-section h3 {
+  margin-bottom: 10px;
+}
+
+/* Responsive repo grid */
+.repo-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.repo-list li {
+  background-color: #f0f0f0;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.repo-list li:hover {
+  background-color: #e1e7ff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.repo-list a {
+  font-weight: bold;
+  color: #0073e6;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.repo-list a:hover,
+.repo-list a:focus {
+  text-decoration: underline;
+  outline: 3px solid #005bb5;
+  outline-offset: 2px;
+}
+
+/* Responsive tweaks */
+@media (min-width: 600px) {
+  .input-group {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .input-group input {
+    width: 300px;
+    margin-right: 10px;
+  }
+
+  .input-group button {
+    width: auto;
+  }
+}
+
+@media (max-width: 400px) {
+  /* Extra small devices */
+  .input-group input,
+  .input-group button {
+    width: 100%;
+    max-width: none;
+  }
+  
+  .profile-info-grid {
+    grid-template-columns: 1fr !important; /* single column for smallest screens */
+  }
+  
+  .view-profile-link {
+    grid-column: span 1 !important;
+  }
+}
